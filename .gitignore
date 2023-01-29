@@ -67,3 +67,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+git-ssh
+git-ssh.pub
+jen-git
+jen-reyes.github.io
