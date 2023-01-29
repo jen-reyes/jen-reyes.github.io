@@ -335,6 +335,10 @@ p {
   padding-top: 60px;
 }
 
+.home-wrapper .container-fluid {
+  max-width: 1444px;
+}
+
 /* FOOTER  */
 
 .footer {
@@ -442,7 +446,7 @@ a.bottom-nav:hover {
   padding: 0 1rem;
 }
 .jennifer {
-  max-width: 608px;
+  max-width: 443px;
   height: auto;
   cursor: pointer;
   width: 100%;
@@ -462,9 +466,8 @@ a.bottom-nav:hover {
   padding: 0 1rem;
 }
 .about-container {
-  /* padding: 0 1% 0 5%; */
   padding: 0;
-  max-width: 1373px;
+  max-width: 1242px;
 }
 
 .about-heading {
