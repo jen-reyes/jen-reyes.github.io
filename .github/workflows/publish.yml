@@ -27,7 +27,7 @@ jobs:
       - name: "Upload artifact \U0001F4E1"
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out/
+          path: ./out
   deploy:
     environment:
       name: github-pages
