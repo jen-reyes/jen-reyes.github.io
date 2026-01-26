@@ -7,7 +7,6 @@ import { Instagram, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   const pathName = usePathname();
-  console.log("pathName", pathName);
   const workRoute = "/work";
   const aboutRoute = "/about";
   const doodlesRoute = "/doodles";
