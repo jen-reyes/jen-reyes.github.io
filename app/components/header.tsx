@@ -29,7 +29,7 @@ export const Header = () => {
       <header className={`${styles.headerNav}`}>
         <div>
           <Link aria-label="work" href={workRoute}>
-            Logo
+            <img className={styles.headerLogo} src="/assets/logo.webp" />
           </Link>
         </div>
         <nav>
@@ -65,7 +65,7 @@ export const Header = () => {
         <header className={styles.headerNavMobile}>
           <div>
             <Link aria-label="Work" href={workRoute}>
-              Logo
+              <img className={styles.headerLogo} src="/assets/logo.webp" />
             </Link>
           </div>
         </header>
@@ -102,13 +102,13 @@ export const Header = () => {
           </nav>
           <div className={`${styles.socialWrapper} ${styles.socialWrapperMobile}`}>
             <a href="">
-              <Linkedin aria-label="Linkedin" />
+              <Linkedin color="white" aria-label="Linkedin" />
             </a>
             <a href="">
-              <Instagram aria-label="Instagram" />
+              <Instagram color="white" aria-label="Instagram" />
             </a>
             <a href="">
-              <Mail aria-label="Mail" />
+              <Mail color="white" aria-label="Mail" />
             </a>
           </div>
         </div>

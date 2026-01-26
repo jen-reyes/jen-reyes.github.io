@@ -5,7 +5,7 @@
   justify-items: center;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px;
   position: sticky;
   top: 0;
   display: none;
@@ -13,6 +13,9 @@
 }
 .headerNav a {
   color: var(--dark-font);
+}
+.headerLogo {
+  width: 100px;
 }
 .headerNav nav {
   display: flex;
@@ -193,5 +196,8 @@
 @media (min-width: 900px) {
   .mobileNav {
     display: none;
+  }
+  .headerLogo {
+    width: 150px;
   }
 }

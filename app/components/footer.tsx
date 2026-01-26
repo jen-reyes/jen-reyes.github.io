@@ -36,13 +36,13 @@ export const Footer = () => {
       </nav>
       <div className={`${styles.socialWrapper}`}>
         <a href="">
-          <Linkedin aria-label="Linkedin" size="2.8rem" />
+          <Linkedin color="white" aria-label="Linkedin" size="2.8rem" />
         </a>
         <a href="">
-          <Instagram aria-label="Instagram" size="2.8rem" />
+          <Instagram color="white" aria-label="Instagram" size="2.8rem" />
         </a>
         <a href="">
-          <Mail aria-label="Mail" size="2.8rem" />
+          <Mail color="white" aria-label="Mail" size="2.8rem" />
         </a>
       </div>
     </footer>
