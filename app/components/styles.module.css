@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   display: none;
+  z-index: 2;
 }
 .headerNav a {
   color: var(--dark-font);
@@ -51,6 +52,11 @@
 }
 
 /** mobile */
+.mobileNav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .headerNavMobile {
   height: 100px;
   background-color: var(--background);
@@ -58,8 +64,7 @@
   display: flex;
   align-items: center;
   padding: 0 40px;
-  position: sticky;
-  top: 0;
+
   color: var(--dark-font);
 }
 .headerNav nav {
@@ -123,6 +128,9 @@
   display: flex;
   gap: 20px;
 }
+.mobileNavOpen {
+  height: 100dvh;
+}
 .mobileNav .navLinks {
   flex-direction: column;
   align-items: center;
@@ -151,6 +159,7 @@
   background-position: 0 calc(100% - 0.1em);
 }
 .navModal {
+  z-index: 2;
   visibility: hidden;
   opacity: 0;
   pointer-events: auto;

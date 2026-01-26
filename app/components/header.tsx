@@ -28,16 +28,14 @@ export const Header = () => {
       {/* desktop header */}
       <header className={`${styles.headerNav}`}>
         <div>
-          <Link aria-label="home" href="/">
+          <Link aria-label="work" href={workRoute}>
             Logo
           </Link>
         </div>
         <nav>
           <ul className={styles.navLinks}>
             <li className={getClassName(workRoute)}>
-              <Link aria-label="home" href={workRoute}>
-                Work
-              </Link>
+              <Link href={workRoute}>Work</Link>
             </li>
             <li className={getClassName(aboutRoute)}>
               <Link href={aboutRoute}>About</Link>
@@ -63,10 +61,10 @@ export const Header = () => {
         </div>
       </header>
       {/* mobile header */}
-      <div className={styles.mobileNav}>
+      <div className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ""}`}>
         <header className={styles.headerNavMobile}>
           <div>
-            <Link aria-label="Home" href="/">
+            <Link aria-label="Work" href={workRoute}>
               Logo
             </Link>
           </div>
