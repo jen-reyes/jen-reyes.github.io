@@ -5,21 +5,18 @@ runs:
   using: "composite"
   steps:
     - name: Setup Node.js ⚙️
-      uses: actions/checkout@v3
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: 25.4.0
 
     - name: Cache dependencies ⚡
-      uses: actions/checkout@v3
       id: cache_dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v5
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install dependencies 🔧
-      uses: actions/checkout@v3
       shell: bash
       if: steps.cache_dependencies.outputs.cache-hit != 'true'
       run: npm ci
