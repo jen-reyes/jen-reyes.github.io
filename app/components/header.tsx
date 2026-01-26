@@ -28,12 +28,16 @@ export const Header = () => {
       {/* desktop header */}
       <header className={`${styles.headerNav}`}>
         <div>
-          <Link href="/">Logo</Link>
+          <Link aria-label="home" href="/">
+            Logo
+          </Link>
         </div>
         <nav>
           <ul className={styles.navLinks}>
             <li className={getClassName(workRoute)}>
-              <Link href={workRoute}>Work</Link>
+              <Link aria-label="home" href={workRoute}>
+                Work
+              </Link>
             </li>
             <li className={getClassName(aboutRoute)}>
               <Link href={aboutRoute}>About</Link>
@@ -47,13 +51,13 @@ export const Header = () => {
           </ul>
         </nav>
         <div className={`${styles.socialWrapper}`}>
-          <a href="">
+          <a aria-label="Linkedin" href="">
             <Linkedin />
           </a>
-          <a href="">
+          <a aria-label="Instagram" href="">
             <Instagram />
           </a>
-          <a href="">
+          <a aria-label="Mail" href="">
             <Mail />
           </a>
         </div>
@@ -62,11 +66,14 @@ export const Header = () => {
       <div className={styles.mobileNav}>
         <header className={styles.headerNavMobile}>
           <div>
-            <Link href="/">Logo</Link>
+            <Link aria-label="Home" href="/">
+              Logo
+            </Link>
           </div>
         </header>
         <div className={`${styles.mobileNavWrapper} ${isOpen ? styles.isOpen : ""}`}>
           <button
+            aria-label="hamburger menu"
             onClick={() => {
               setIsOpen((isOpen) => !isOpen);
             }}
@@ -97,13 +104,13 @@ export const Header = () => {
           </nav>
           <div className={`${styles.socialWrapper} ${styles.socialWrapperMobile}`}>
             <a href="">
-              <Linkedin />
+              <Linkedin aria-label="Linkedin" />
             </a>
             <a href="">
-              <Instagram />
+              <Instagram aria-label="Instagram" />
             </a>
             <a href="">
-              <Mail />
+              <Mail aria-label="Mail" />
             </a>
           </div>
         </div>
