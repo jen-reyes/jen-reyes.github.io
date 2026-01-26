@@ -6,16 +6,4 @@ const nextConfig: NextConfig = {
   reactStrictMode: true
 };
 
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/work",
-        permanent: true
-      }
-    ];
-  }
-};
-
 export default nextConfig;
