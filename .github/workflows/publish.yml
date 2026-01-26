@@ -24,6 +24,11 @@ jobs:
           static_site_generator: next
       - name: "Build with Next.js \U0001F3D7️"
         run: npx next build
+      - uses: actions/upload-artifact@master
+        with: null
+        name: page
+        path: build
+        if-no-files-found: error
       - name: "Upload artifact \U0001F4E1"
         uses: actions/upload-pages-artifact@v3
         with:
@@ -35,6 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: page
+          path: .
       - name: "Publish to GitHub Pages \U0001F680"
         id: deployment
         uses: actions/deploy-pages@v4
