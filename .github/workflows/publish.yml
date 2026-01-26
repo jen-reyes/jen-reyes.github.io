@@ -25,10 +25,10 @@ jobs:
       - name: "Build with Next.js \U0001F3D7️"
         run: npx next build
       - uses: actions/upload-artifact@master
-        with:
-          name: page
-          path: build
-          if-no-files-found: error
+        with: null
+        name: page
+        path: build
+        if-no-files-found: error
   deploy:
     environment:
       name: github-pages
@@ -40,6 +40,10 @@ jobs:
         with:
           name: page
           path: .
+      - name: "Upload artifact \U0001F4E1"
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
       - name: "Publish to GitHub Pages \U0001F680"
         id: deployment
         uses: actions/deploy-pages@v4
