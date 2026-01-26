@@ -1,5 +1,5 @@
 name: publish-to-github-pages
-'on':
+"on":
   push:
     branches:
       - main
@@ -27,19 +27,19 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: page
-          path: build
+          path: ./out
           if-no-files-found: error
   deploy:
     environment:
       name: github-pages
-      url: '${{ steps.deployment.outputs.page_url }}'
+      url: "${{ steps.deployment.outputs.page_url }}"
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/download-artifact@master
         with:
           name: page
-          path: .
+          path: ./out
       - name: "Upload artifact \U0001F4E1"
         uses: actions/upload-pages-artifact@v3
         with:
