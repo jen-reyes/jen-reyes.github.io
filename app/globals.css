@@ -132,6 +132,7 @@ a:visited {
 }
 html {
   font-size: 10px;
+  height: 100%;
 }
 button {
   background: transparent;
@@ -152,4 +153,10 @@ button {
 body {
   --background: #f5f5f4;
   --dark-font: #000000;
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
+main {
+  flex: 1 1 auto;
 }

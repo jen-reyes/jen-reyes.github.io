@@ -8,8 +8,11 @@
   padding: 0 20px;
   position: sticky;
   top: 0;
-  color: var(--dark-font);
   display: none;
+  z-index: 2;
+}
+.headerNav a {
+  color: var(--dark-font);
 }
 .headerNav nav {
   display: flex;
@@ -49,6 +52,11 @@
 }
 
 /** mobile */
+.mobileNav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .headerNavMobile {
   height: 100px;
   background-color: var(--background);
@@ -56,8 +64,7 @@
   display: flex;
   align-items: center;
   padding: 0 40px;
-  position: sticky;
-  top: 0;
+
   color: var(--dark-font);
 }
 .headerNav nav {
@@ -121,15 +128,22 @@
   display: flex;
   gap: 20px;
 }
+.mobileNavOpen {
+  height: 100dvh;
+}
 .mobileNav .navLinks {
   flex-direction: column;
-  color: white;
   align-items: center;
   font-size: 4rem;
+  color: white;
 }
 .socialWrapperMobile {
   position: absolute;
   bottom: 30px;
+  color: white;
+  display: none;
+}
+.mobileNav .navLinks a {
   color: white;
 }
 .headerNav a {
@@ -137,7 +151,7 @@
   padding: 0.4em 0;
   font-size: 1.8rem;
 }
-.active {
+.mobileNav .navLinks .active {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: repeat-x;
   background-size: 1px 1px;
@@ -145,6 +159,7 @@
   background-position: 0 calc(100% - 0.1em);
 }
 .navModal {
+  z-index: 2;
   visibility: hidden;
   opacity: 0;
   pointer-events: auto;
@@ -165,10 +180,13 @@
 .navModal.modalOpen {
   display: flex;
   align-items: center;
-  opacity: 1;
+  opacity: 0.99;
   visibility: visible;
 }
 .navModal.modalOpen nav {
+  display: flex;
+}
+.navModal.modalOpen .socialWrapperMobile {
   display: flex;
 }
 

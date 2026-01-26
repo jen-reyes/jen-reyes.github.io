@@ -28,7 +28,9 @@ export const Header = () => {
       {/* desktop header */}
       <header className={`${styles.headerNav}`}>
         <div>
-          <Link href="/">Logo</Link>
+          <Link aria-label="work" href={workRoute}>
+            Logo
+          </Link>
         </div>
         <nav>
           <ul className={styles.navLinks}>
@@ -47,26 +49,29 @@ export const Header = () => {
           </ul>
         </nav>
         <div className={`${styles.socialWrapper}`}>
-          <a href="">
+          <a aria-label="Linkedin" href="">
             <Linkedin />
           </a>
-          <a href="">
+          <a aria-label="Instagram" href="">
             <Instagram />
           </a>
-          <a href="">
+          <a aria-label="Mail" href="">
             <Mail />
           </a>
         </div>
       </header>
       {/* mobile header */}
-      <div className={styles.mobileNav}>
+      <div className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ""}`}>
         <header className={styles.headerNavMobile}>
           <div>
-            <Link href="/">Logo</Link>
+            <Link aria-label="Work" href={workRoute}>
+              Logo
+            </Link>
           </div>
         </header>
         <div className={`${styles.mobileNavWrapper} ${isOpen ? styles.isOpen : ""}`}>
           <button
+            aria-label="hamburger menu"
             onClick={() => {
               setIsOpen((isOpen) => !isOpen);
             }}
@@ -97,13 +102,13 @@ export const Header = () => {
           </nav>
           <div className={`${styles.socialWrapper} ${styles.socialWrapperMobile}`}>
             <a href="">
-              <Linkedin />
+              <Linkedin aria-label="Linkedin" />
             </a>
             <a href="">
-              <Instagram />
+              <Instagram aria-label="Instagram" />
             </a>
             <a href="">
-              <Mail />
+              <Mail aria-label="Mail" />
             </a>
           </div>
         </div>
