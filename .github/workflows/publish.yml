@@ -23,7 +23,7 @@ jobs:
         with:
           static_site_generator: next
       - name: "Build with Next.js \U0001F3D7️"
-        run: npx next build
+        run: npm run build
       - uses: actions/upload-artifact@master
         with:
           name: page
