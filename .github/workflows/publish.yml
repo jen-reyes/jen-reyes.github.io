@@ -24,6 +24,8 @@ jobs:
           static_site_generator: next
       - name: "Build with Next.js \U0001F3D7️"
         run: npx next build
+      - name: List files for debugging
+        run: ls -R
       - name: "Upload artifact \U0001F4E1"
         uses: actions/upload-pages-artifact@v3
         with:
