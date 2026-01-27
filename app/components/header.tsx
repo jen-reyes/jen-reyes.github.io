@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
-  const workRoute = "/work";
+  const workRoute = "/";
   const aboutRoute = "/about";
   const doodlesRoute = "/doodles";
   const contactRoute = "/contact";

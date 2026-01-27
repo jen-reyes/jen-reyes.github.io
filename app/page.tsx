@@ -7,7 +7,7 @@ interface Project {
   title: String;
 }
 
-const Work = () => {
+const Page = () => {
   const projects: Project[] = [
     { src: "/blackwood/blackwood.gif", title: "Blackwood" },
     { src: "/adayinaction/adayinaction.webp", title: "A Day of Action" },
@@ -22,13 +22,14 @@ const Work = () => {
     { src: "/montarey/montarey.webp", title: "Monarey Winery" },
     { src: "/tvbwf/tvbwf.webp", title: "Temecula Valley Balloon & Wine Festival" }
   ];
+
   return (
     <div className={styles.workWrapper}>
       <ul>
         {projects.map((project) => {
           return (
             <li key={project.title as Key}>
-              <Link href="/work">
+              <Link href="/">
                 <div>
                   <span>{project.title}</span>
                 </div>
@@ -42,4 +43,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Page;
