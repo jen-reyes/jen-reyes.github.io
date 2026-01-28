@@ -1,0 +1,84 @@
+.firstSection {
+  background: #f5f5f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+.accordionWrapper .line {
+  height: 1px;
+  background: var(--dark-font);
+}
+.accordionWrapper button {
+  text-align: left;
+  padding: 15px 0;
+}
+.firstSection h2 {
+  font-size: 3.8rem;
+  font-weight: 500;
+  background-image: linear-gradient(to top, #4feaab 50%, transparent 50%);
+  width: auto;
+  display: inline;
+}
+.firstSection h3 {
+  font-weight: 400;
+}
+.firstSection p {
+  font-size: 1.6rem;
+}
+.firstSection div:first-child {
+  flex-basis: 33.3333%;
+}
+.firstSection div:last-child {
+  flex-basis: 90%;
+}
+.accordion {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+.accordion button {
+  font-size: 2.6rem;
+  width: 100%;
+}
+.accordion div {
+  width: 100%;
+  flex-direction: column;
+}
+.accordion .content {
+  display: none;
+  gap: 25px;
+  line-height: 1.2;
+  margin: 30px 0px 30px 40px;
+  word-wrap: balance;
+}
+.accordion p {
+  max-width: calc(100% - 40px);
+}
+.accordion .content.active {
+  display: flex;
+}
+
+@media (min-width: 900) {
+  .firstSection div:last-child {
+    flex-basis: 66.6666%;
+  }
+  .accordionWrapper {
+    flex-direction: row;
+  }
+  .accordion .content {
+    margin: 30px 0px 30px 80px;
+  }
+  .accordion p {
+    max-width: calc(100% - 80px);
+  }
+}

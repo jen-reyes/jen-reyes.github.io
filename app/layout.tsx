@@ -16,6 +16,18 @@ const poppinsTitle = Poppins({
   subsets: ["latin"]
 });
 
+const poppinsTitleMedium = Poppins({
+  variable: "--title-font",
+  weight: "500",
+  subsets: ["latin"]
+});
+
+const poppinsTitleBold = Poppins({
+  variable: "--title-font",
+  weight: "600",
+  subsets: ["latin"]
+});
+
 export const metadata: Metadata = {
   title: "Jen Reyes",
   description: "Jennifer Reyes Studios"
