@@ -82,10 +82,25 @@
     flex-direction: row;
     gap: 50px;
     font-size: 2.7rem;
+    word-wrap: balance;
   }
   .aboutMeWrapper img {
     max-width: 531px;
     height: 304px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero {
+    height: 700px;
+  }
+  .aboutMeWrapper div {
+    max-width: 500px;
+  }
+  .aboutMeWrapper img {
+    max-width: 400px;
+    height: 404px;
     width: 100%;
   }
 }

@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import { useEffect, useRef } from "react";
 
 export const Hero = () => {
-  const svgText = useRef<HTMLElement>(null);
+  const svgText = useRef<SVGTextPathElement>(null);
 
   useEffect(() => {
     const textPath = svgText.current;
