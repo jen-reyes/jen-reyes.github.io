@@ -1,5 +1,12 @@
+import { Hero } from "./components/hero.tsx";
+
 const About = () => {
-  return <>About</>;
+  return (
+    <>
+      {/* hero section */}
+      <Hero />
+    </>
+  );
 };
 
 export default About;
