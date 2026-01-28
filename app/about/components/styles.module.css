@@ -15,14 +15,15 @@
 }
 
 .hero svg {
-  transform: scale(2);
   position: absolute;
-  top: 180px;
+  top: 120px;
   left: 0;
   right: 0;
   width: 100%;
 }
-
+.hero text {
+  transform: scale(2);
+}
 .aboutMeWrapper {
   z-index: 1;
   display: flex;
@@ -70,7 +71,10 @@
     padding-bottom: unset;
   }
   .hero svg {
-    top: 110px;
+    top: 50px;
+    transform: scale(1);
+  }
+  .hero text {
     transform: scale(1);
   }
   .textOnPath {
