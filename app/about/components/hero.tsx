@@ -64,7 +64,7 @@ export const Hero = () => {
     <>
       {/* hero section */}
       <div className={styles.hero}>
-        <svg viewBox="0 -50 1440 400" fill="none">
+        <svg viewBox="0 -150 1440 400" fill="none">
           <path
             id="textPath"
             d="M0 .5c155.69 0 155.69 64 311.39 64S467.08.5 622.77.5s155.7 64 311.39 64 155.7-64 311.39-64 155.7 64 311.39 64"
